@@ -1,0 +1,140 @@
+html {
+font-size: medium;
+    background-color: #D0F0C0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.7em;
+}
+
+header {
+    position: fixed;       /* Stays at the top even when scrolling */
+    top: 0;                /* Align to top */
+    left: 0;               /* Align to left */
+    width: 100%;           /* Full width */
+    background-color: #333;
+    color: azure;
+    display: flex;
+    padding: 0px 20px;
+    text-align: center;
+    z-index: 1000;         /* Keep above other elements */
+    height: 70px;
+    box-sizing: border-box;
+}
+
+a:visited {
+     color: blueviolet;   
+    }
+
+    a:hover {
+    font-weight: bolder;
+    color: cornflowerblue;
+    }
+
+    a:focus {
+    color: rgb(0, 128, 0);
+    }
+
+    footer {
+        position: fixed; /* Stays in place */
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        color: white;
+        text-align: left;
+    display: flex;
+    justify-content: flex-start; /* align the group to the left */
+    gap: 1.5rem;             /* space between links */
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-left: 1em;
+    }
+
+.bio {
+    display: grid;
+}
+
+h2 {
+    border: solid 3px #52a5e9;
+    height: 1.5em;
+    width: 10em;
+    border-radius: 10px 10px 10px 10px;
+    padding: 5px;
+}
+
+img {
+    width: 50%;
+    height: auto;
+    border: 0;
+    border-radius: 20px;
+}
+
+/* Responsive media queries (mobile-first) */
+
+/* Larger phones / small tablets */
+@media screen and (min-width: 481px) {
+    html { font-size: 16px; }
+    header { height: 72px; padding: 0 24px; }
+    table { width: 85%; margin-top: 5.5rem; }
+    .nav1 { position: static; display: inline-block; opacity: 0.95; }
+    img { width: 60%; }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+    html { font-size: 17px; }
+    header { height: 80px; padding: 0 32px; }
+    table { width: 80%; margin-top: 6rem; }
+    .about { grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .nav2, strong { justify-content: flex-end; }
+    img { width: 45%; }
+}
+
+/* Desktop / large */
+@media screen and (min-width: 1024px) {
+    html { font-size: 18px; }
+    header { height: 88px; padding: 0 40px; }
+    table { width: 70%; margin-top: 7rem; }
+    img { width: 35%; }
+}
+
+/* Very small screens tweaks */
+@media screen and (max-width: 420px) {
+    header { height: auto; padding: 10px; flex-wrap: wrap; }
+    h2, h3 { float: none; margin: .5rem 0; border-width: 3px; }
+    table { width: 100%; margin-top: 10rem; font-size: 0.95rem; }
+    img { width: 100%; border-radius: 12px; }
+    footer {font-size: 14px;}
+}
+
+/* Phones held landscape */
+@media (orientation: landscape) and (max-width: 767px) {
+    /* compact header/footer, less vertical spacing */
+    header { height: 56px; padding: 6px 12px; }
+    table  { margin-top: 4.5rem; width: 95%; }
+    .nav1  { position: static; opacity: 0.95; }
+    img    { width: 55%; }
+}
+
+/* Phablet / small tablet landscape */
+@media (orientation: landscape) and (min-width: 768px) and (max-width: 1023px) {
+    header { height: 72px; padding: 0 20px; }
+    table  { margin-top: 5.5rem; width: 85%; }
+    img    { width: 45%; }
+}
+
+
+    footer a,
+footer a:visited {
+    color: #ffffff; /* desired color for normal & visited links */
+    text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus {
+    color: cornflowerblue; /* desired hover/focus color */
+    font-weight: 600;
+}
+
+
+/* 1. Flexbox was used for the header and footer because they need to stay in the viewport and at their respective edges of it.
+2. Grid was used for the bio because they need to be carefully organized and spaced between. */
