@@ -1,12 +1,12 @@
 html {
-font-size: medium;
+    font-size: medium;
     background-color: #D0F0C0;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 1.7em;
 }
 
 header {
-    position: fixed;       /* Stays at the top even when scrolling */
+position: fixed;       /* Stays at the top even when scrolling */
     top: 0;                /* Align to top */
     left: 0;               /* Align to left */
     width: 100%;           /* Full width */
@@ -20,18 +20,14 @@ header {
     box-sizing: border-box;
 }
 
-a:visited {
-     color: blueviolet;   
-    }
+.sec1 {
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
 
-    a:hover {
-    font-weight: bolder;
-    color: cornflowerblue;
-    }
-
-    a:focus {
-    color: rgb(0, 128, 0);
-    }
+.sec2 {
+    padding-bottom: 120px;
+}
 
     footer {
         position: fixed; /* Stays in place */
@@ -49,23 +45,12 @@ a:visited {
     padding-left: 1em;
     }
 
-.bio {
-    display: grid;
-}
-
-h2 {
+    h2 {
     border: solid 3px #52a5e9;
     height: 1.5em;
-    width: 10em;
+    width: 7em;
     border-radius: 10px 10px 10px 10px;
     padding: 5px;
-}
-
-img {
-    width: 50%;
-    height: auto;
-    border: 0;
-    border-radius: 20px;
 }
 
 /* Responsive media queries (mobile-first) */
@@ -122,7 +107,7 @@ img {
     img    { width: 45%; }
 }
 
-    footer a,
+footer a,
 footer a:visited {
     color: #ffffff; /* desired color for normal & visited links */
     text-decoration: none;
@@ -133,53 +118,3 @@ footer a:focus {
     color: cornflowerblue; /* desired hover/focus color */
     font-weight: 600;
 }
-
-fieldset {
-    border-radius: 7px;
-    border-color: black;
-}
-
-#formheading {
-    width: 7em;
-}
-
-.container {
-background-color: rgb(251, 210, 156);
-background-image: url('../img/hero_image.jpg');
-background-repeat: no-repeat;
-background-position: top;
-background-size: cover;
-border-radius: 10px;
-}
-
-.hero {
-display: flex; 
-justify-content: flex-start;
-align-items: center;
-gap: 30px;
-background-color: hsla(0, 0%, 100%, 0.35);
-}
-
-.h1 {
-  font-size: 200%;
-  color: aliceblue;
-  text-shadow: 2px 2px 4px #000;
-  background-color: hsla(0, 0%, 0%, 0.40%);
-  padding: 0.25rem;
-  border-radius: 10px;
-}
-
-.profile-pic-figure {
-  width: 15%;
-}
-
-.profile-pic-figure img {
-  width: 100%;
-  height: auto;
-  min-width: 100px;
-  border: 3px solid black;
-  border-radius: 50%;
-}
-
-/* 1. Flexbox was used for the header and footer because they need to stay in the viewport and at their respective edges of it.
-2. Grid was used for the bio because they need to be carefully organized and spaced between. */

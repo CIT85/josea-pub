@@ -37,3 +37,6 @@ The images would change size when a screen meets a certain aspect ratio. This is
 
 ## Hero Image Design
 I've chosen the image of earth's stratosphere because i thought that it might fit the topic of the site. But I did also thought of looking for other images but that was the only option for now. It is located in the contact page. I put it on the top of the page, rounded the edges, added a pfp of myself and made the background image slightly faded.
+
+## Note to self
+Use padding bottom and padding top as alternatives to using line breaks. For example, if content are underneath the header, use padding top to move stuff below it instead of using multiple line breaks.
