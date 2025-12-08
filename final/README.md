@@ -33,4 +33,7 @@ The purpose of the new subpage I created Is to serve as an About Me page. It con
 I have made optimizations on images by making them adapt to viewport size. I have also rounded their edges with border-radius.
 
 ## Accessibility 
-The images would be in center or left when a screen meets a certain aspect ratio. For Example: 1920 x 1080 would have the images to the left and info to the right, While the images will be in center and info will be below them on a phone of 2556 x 1179 resolution.
+The images would change size when a screen meets a certain aspect ratio. This is done through media queries.
+
+## Hero Image Design
+I've chosen the image of earth's stratosphere because i thought that it might fit the topic of the site. But I did also thought of looking for other images but that was the only option for now. It is located in the contact page. I put it on the top of the page, rounded the edges, added a pfp of myself and made the background image slightly faded.

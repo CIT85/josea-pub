@@ -144,5 +144,43 @@ fieldset {
     width: 7em;
 }
 
+.container {
+background-color: rgb(251, 210, 156);
+background-image: url('../img/hero_image.jpg');
+background-repeat: no-repeat;
+background-position: top;
+background-size: cover;
+border-radius: 10px;
+}
+
+.hero {
+display: flex; 
+justify-content: flex-start;
+align-items: center;
+gap: 30px;
+background-color: hsla(0, 0%, 100%, 0.35);
+}
+
+.h1 {
+  font-size: 200%;
+  color: aliceblue;
+  text-shadow: 2px 2px 4px #000;
+  background-color: hsla(0, 0%, 0%, 0.40%);
+  padding: 0.25rem;
+  border-radius: 10px;
+}
+
+.profile-pic-figure {
+  width: 15%;
+}
+
+.profile-pic-figure img {
+  width: 100%;
+  height: auto;
+  min-width: 100px;
+  border: 3px solid black;
+  border-radius: 50%;
+}
+
 /* 1. Flexbox was used for the header and footer because they need to stay in the viewport and at their respective edges of it.
 2. Grid was used for the bio because they need to be carefully organized and spaced between. */
