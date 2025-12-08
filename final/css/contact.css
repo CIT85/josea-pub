@@ -135,6 +135,14 @@ footer a:focus {
     font-weight: 600;
 }
 
+fieldset {
+    border-radius: 7px;
+    border-color: black;
+}
+
+#formheading {
+    width: 7em;
+}
 
 /* 1. Flexbox was used for the header and footer because they need to stay in the viewport and at their respective edges of it.
 2. Grid was used for the bio because they need to be carefully organized and spaced between. */

@@ -17,7 +17,7 @@
     <section class="bio">
         <h2>Hey, I'm Jose Arroyo!</h2>
         <p>
-            I am an 18 year old guy who is learning about <strong>Web Development</strong>! As you might've already know, I'm the creator of this website. For creating things like this, I perfer progress over perfection. (I'm not very skilled to make a masterpiece, so that's why I prefer that.) Outside of education and coding, I mostly play video games on PC and Playstation, chill out in my room, listen  to music and a couple more. 
+            I am an 18 year old guy who is learning about <strong>Web Development</strong>! As you might've already know, I'm the creator of this website. For creating things like this, I perfer progress over perfection. (I'm not very skilled to make a masterpiece, so that's why I prefer that.) Outside of education and coding, I mostly play video games on PC and Playstation, chill out in my room, listen  to music and a couple more. I created this site because I've been inspired by videos of landscapes in social media (Especially in TikTok).
         </p>
         <br>
         <figure>
@@ -25,15 +25,27 @@
   <figcaption>A portrait of me from last year!</figcaption>
 </figure>
         </section>
-        <hr>
+        <hr><br>
         <section>
-            <h2>Quick Options</h2>
-        <ul>
-            <li>Download a <a href="../final/img/globe.png" download="globe">globe favicon</a>.</li>
-            <li>
-                Contact me at <a href="mailto:1047719@MY.SCCCD.EDU">my email address</a>.
-            </li>
-        </ul>
+            <h2 id="formheading">Contact Form</h2>
+            <form action="mailto:1047719@MY.SCCCD.EDU" method="POST" enctype="text/plain">
+                <fieldset>
+                    <legend>Send me a message</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="e.g. John Doe" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="example@example.com" required>
+                    
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" placeholder="Example" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder=" What's on your mind?" required></textarea>
+                    
+                    <button type="submit">Send Message</button>
+                </fieldset>
+            </form>
         </section>
         <br><br><br><br><hr>
         <footer>
