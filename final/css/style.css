@@ -98,7 +98,7 @@ h2, h3 {
 
     @media (max-width: 600px) {
         table {
-            width: 95%;
+            width: 75%;
             margin-top: 6rem; /* Reduced from 8rem to prevent excessive top spacing */
             display: block;
             overflow-x: auto;
@@ -217,7 +217,7 @@ footer a:focus {
 @media screen and (min-width: 1020px) {
     html { font-size: 18px;}
     header { height: 88px; padding: 0 40px; }
-    table { width: 70%; margin-top: 7rem; }
+    table { width: 50%; margin-top: 3rem; font-size: 15px;}
     img { width: 35%; }
 }
 
