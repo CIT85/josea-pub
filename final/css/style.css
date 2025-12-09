@@ -3,6 +3,7 @@ html {
     background-color: #D0F0C0;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 1.7em;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -42,8 +43,6 @@ h2, h3 {
         color: white;
         text-decoration: none;
         background-color: #575757;
-        position: fixed;
-        opacity: 0;
         border: 0;
         border-radius: 10px;
     }
@@ -55,11 +54,12 @@ h2, h3 {
     section {
         padding: 10px;
         margin: 10px;
+        margin-bottom: 80px; /* Prevent content from being hidden by fixed footer */
     }
 
     td, th {
         padding: 12px 16px;
-        text-align: left;
+        text-align: center;
         border: 1px solid #444;
         vertical-align: middle;
     }
@@ -71,6 +71,7 @@ h2, h3 {
         margin: 5rem auto 2rem;
         box-shadow: 0 2px 6px rgba(0,0,0,0.12);
         background: #fff;
+
     }
 
     caption {
@@ -98,13 +99,14 @@ h2, h3 {
     @media (max-width: 600px) {
         table {
             width: 95%;
-            margin-top: 8rem;
+            margin-top: 6rem; /* Reduced from 8rem to prevent excessive top spacing */
             display: block;
             overflow-x: auto;
         }
         td, th {
             display: table-cell;
             width: auto;
+            text-align: center;
         }
     }
 
@@ -159,11 +161,12 @@ a {
         text-align: left;
     display: flex;
     justify-content: flex-start; /* align the group to the left */
-    gap: 1.5rem;             /* space between links */
+    gap: 1.5em;             /* space between links */
     align-items: flex-start;
     flex-wrap: wrap;
     padding-left: 1em;
     font-size: small;
+    padding-bottom: 5px;
     }
 
     img {
@@ -191,10 +194,12 @@ footer a:focus {
 
 /* Larger phones / small tablets */
 @media screen and (min-width: 481px) {
-    html { font-size: 16px; }
+    html { font-size: 16px; padding-bottom: 70px;}
     header { height: 72px; padding: 0 24px; }
     table { width: 85%; margin-top: 5.5rem; }
-    .nav1 { position: static; display: inline-block; opacity: 0.95; }
+    th { width: 100%; margin-top: 7.5rem; font-size: 0.95rem; }
+    td { width: 100%; margin-top: 7.5em; font-size: 0.95rem; padding-left: 10em; text-align: center;}
+    .nav1 { position: static; display: inline-block;}
     img { width: 60%; }
 }
 
@@ -202,36 +207,54 @@ footer a:focus {
 @media screen and (min-width: 768px) {
     html { font-size: 17px; }
     header { height: 80px; padding: 0 32px; }
-    table { width: 80%; margin-top: 6rem; }
+    table { width: 80%; margin-top: 6rem;}
     .about { grid-template-columns: 1fr 1fr; gap: 1rem; }
     .nav2, strong { justify-content: flex-end; }
     img { width: 45%; }
 }
 
 /* Desktop / large */
-@media screen and (min-width: 1024px) {
-    html { font-size: 18px; }
+@media screen and (min-width: 1020px) {
+    html { font-size: 18px;}
     header { height: 88px; padding: 0 40px; }
     table { width: 70%; margin-top: 7rem; }
     img { width: 35%; }
 }
 
+/* iPhone 15 and modern smartphones (390px) */
+@media screen and (max-width: 430px) and (min-width: 375px) {
+    html { font-size: 15px; padding-top: 60px; padding-bottom: 90px;}
+    header { height: 64px; padding: 8px 16px; }
+    h2, h3 { float: none; margin: .5rem 0; border-width: 3px; }
+    table { width: 100%; margin-top: 7.5rem; font-size: 0.95rem; }
+    th { width: 100%; margin-top: 7.5rem; font-size: 0.95rem; }
+    td { width: 100%; margin-top: 7.5em; font-size: 0.95rem; padding-left: 10em; text-align: center;}
+    img { width: 100%; border-radius: 12px; }
+    footer { font-size: 10px; }
+    section { margin-bottom: 90px; }
+}
+
 /* Very small screens tweaks */
 @media screen and (max-width: 420px) {
-    header { height: auto; padding: 10px; flex-wrap: wrap; }
+    html { padding-bottom: 70px;}
+    header { height: auto; padding: 10px; flex-wrap: wrap;}
     h2, h3 { float: none; margin: .5rem 0; border-width: 3px; }
-    table { width: 100%; margin-top: 10rem; font-size: 0.95rem; }
+    table { width: 100%; margin-top: 7rem; font-size: 0.95rem; } /* Reduced from 10rem to keep content visible */
+    th { width: 100%; margin-top: 7.5rem; font-size: 0.95rem; }
+    td { width: 100%; margin-top: 7.5em; font-size: 0.95rem; padding-left: 10em; text-align: center;}
     img { width: 100%; border-radius: 12px; }
     footer {font-size: 14px;}
+    section { margin-bottom: 100px; } /* Extra space for footer on tiny screens */
 }
 
 /* Phones held landscape */
 @media (orientation: landscape) and (max-width: 767px) {
     /* compact header/footer, less vertical spacing */
     header { height: 56px; padding: 6px 12px; }
-    table  { margin-top: 4.5rem; width: 95%; }
+    table  { margin-top: 5rem; width: 95%; } /* Increased from 4.5rem for better spacing */
     .nav1  { position: static; opacity: 0.95; }
     img    { width: 55%; }
+    section { margin-bottom: 70px; } /* Adequate space for compact footer */
 }
 
 /* Phablet / small tablet landscape */

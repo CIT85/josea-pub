@@ -47,6 +47,8 @@ footer {
     align-items: flex-start;
     flex-wrap: wrap;
     padding-left: 1em;
+    font-size: small;
+    padding-bottom: 10px;  /* ADD THIS LINE */
     }
 
     img {
@@ -54,6 +56,12 @@ footer {
     height: auto;
     border: 0;
     border-radius: 20px;
+}
+
+section {
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 80px; /* Prevent content from being hidden by fixed footer */
 }
 
 /* Responsive media queries (mobile-first) */
@@ -89,18 +97,19 @@ footer {
 @media screen and (max-width: 420px) {
     header { height: auto; padding: 10px; flex-wrap: wrap; }
     h2, h3 { float: none; margin: .5rem 0; border-width: 3px; }
-    table { width: 100%; margin-top: 10rem; font-size: 0.95rem; }
+    table { width: 100%; margin-top: 7rem; font-size: 0.95rem; } /* Reduced from 10rem */
     img { width: 100%; border-radius: 12px; }
     footer {font-size: 14px;}
+    section { margin-bottom: 100px; } /* ADD THIS LINE */
 }
 
 /* Phones held landscape */
 @media (orientation: landscape) and (max-width: 767px) {
-    /* compact header/footer, less vertical spacing */
     header { height: 56px; padding: 6px 12px; }
-    table  { margin-top: 4.5rem; width: 95%; }
+    table  { margin-top: 5rem; width: 95%; } /* Increased from 4.5rem */
     .nav1  { position: static; opacity: 0.95; }
     img    { width: 55%; }
+    section { margin-bottom: 70px; } /* ADD THIS LINE */
 }
 
 /* Phablet / small tablet landscape */
@@ -110,6 +119,18 @@ footer {
     img    { width: 45%; }
 }
 
+@media (max-width: 600px) {
+    table {
+        width: 95%;
+        margin-top: 6rem; /* Reduced from 8rem */
+        display: block;
+        overflow-x: auto;
+    }
+    td, th {
+        display: table-cell;
+        width: auto;
+    }
+}
 
     footer a,
 footer a:visited {
@@ -123,6 +144,16 @@ footer a:focus {
     font-weight: 600;
 }
 
+/* iPhone 15 and modern smartphones (390px) */
+@media screen and (max-width: 430px) and (min-width: 375px) {
+    html { font-size: 15px; padding-top: 60px; padding-bottom: 79px;}
+    header { height: 64px; padding: 8px 16px; padding-bottom: 6em; }
+    h2, h3 { float: none; margin: .5rem 0; border-width: 3px; }
+    table { width: 100%; margin-top: 7.5rem; font-size: 0.95rem; }
+    img { width: 100%; border-radius: 12px; }
+    footer { font-size: 14px;}
+    section { margin-bottom: 90px; }
+}
 
 /* Useful utilities (optional)
    - Use clamp() for responsive font sizes:

@@ -34,7 +34,14 @@ a:visited {
         background-color: #333;
         color: white;
         text-align: left;
+        display: flex;
+        justify-content: flex-start;
+        gap: 1.5rem;
+        align-items: flex-start;
+        flex-wrap: wrap;
         padding-left: 1em;
+        font-size: small;
+        padding-bottom: 10px;  /* ADD THIS LINE */
     }
 
     .palette {
@@ -139,18 +146,19 @@ a:visited {
 @media screen and (max-width: 420px) {
     header { height: auto; padding: 10px; flex-wrap: wrap; }
     h2, h3 { float: none; margin: .5rem 0; border-width: 3px; }
-    table { width: 100%; margin-top: 10rem; font-size: 0.95rem; }
+    table { width: 100%; margin-top: 7rem; font-size: 0.95rem; } /* Reduced from 10rem */
     img { width: 100%; border-radius: 12px; }
     footer {font-size: 14px;}
+    section { margin-bottom: 100px; } /* ADD THIS LINE */
 }
 
 /* Phones held landscape */
 @media (orientation: landscape) and (max-width: 767px) {
-    /* compact header/footer, less vertical spacing */
     header { height: 56px; padding: 6px 12px; }
-    table  { margin-top: 4.5rem; width: 95%; }
+    table  { margin-top: 5rem; width: 95%; } /* Increased from 4.5rem */
     .nav1  { position: static; opacity: 0.95; }
     img    { width: 55%; }
+    section { margin-bottom: 70px; } /* ADD THIS LINE */
 }
 
 /* Phablet / small tablet landscape */
@@ -158,6 +166,25 @@ a:visited {
     header { height: 72px; padding: 0 20px; }
     table  { margin-top: 5.5rem; width: 85%; }
     img    { width: 45%; }
+}
+
+@media (max-width: 600px) {
+    table {
+        width: 95%;
+        margin-top: 6rem; /* Reduced from 8rem */
+        display: block;
+        overflow-x: auto;
+    }
+    td, th {
+        display: table-cell;
+        width: auto;
+    }
+}
+
+section {
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 80px; /* Prevent content from being hidden by fixed footer */
 }
 
 /* Useful utilities (optional)

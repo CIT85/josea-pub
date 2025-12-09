@@ -47,7 +47,9 @@ a:visited {
     align-items: flex-start;
     flex-wrap: wrap;
     padding-left: 1em;
-    }
+    font-size: small;
+    padding-bottom: 10px;  /* ADD THIS LINE */
+}
 
 .bio {
     display: grid;
@@ -66,60 +68,6 @@ img {
     height: auto;
     border: 0;
     border-radius: 20px;
-}
-
-/* Responsive media queries (mobile-first) */
-
-/* Larger phones / small tablets */
-@media screen and (min-width: 481px) {
-    html { font-size: 16px; }
-    header { height: 72px; padding: 0 24px; }
-    table { width: 85%; margin-top: 5.5rem; }
-    .nav1 { position: static; display: inline-block; opacity: 0.95; }
-    img { width: 60%; }
-}
-
-/* Tablet */
-@media screen and (min-width: 768px) {
-    html { font-size: 17px; }
-    header { height: 80px; padding: 0 32px; }
-    table { width: 80%; margin-top: 6rem; }
-    .about { grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .nav2, strong { justify-content: flex-end; }
-    img { width: 45%; }
-}
-
-/* Desktop / large */
-@media screen and (min-width: 1024px) {
-    html { font-size: 18px; }
-    header { height: 88px; padding: 0 40px; }
-    table { width: 70%; margin-top: 7rem; }
-    img { width: 35%; }
-}
-
-/* Very small screens tweaks */
-@media screen and (max-width: 420px) {
-    header { height: auto; padding: 10px; flex-wrap: wrap; }
-    h2, h3 { float: none; margin: .5rem 0; border-width: 3px; }
-    table { width: 100%; margin-top: 10rem; font-size: 0.95rem; }
-    img { width: 100%; border-radius: 12px; }
-    footer {font-size: 14px;}
-}
-
-/* Phones held landscape */
-@media (orientation: landscape) and (max-width: 767px) {
-    /* compact header/footer, less vertical spacing */
-    header { height: 56px; padding: 6px 12px; }
-    table  { margin-top: 4.5rem; width: 95%; }
-    .nav1  { position: static; opacity: 0.95; }
-    img    { width: 55%; }
-}
-
-/* Phablet / small tablet landscape */
-@media (orientation: landscape) and (min-width: 768px) and (max-width: 1023px) {
-    header { height: 72px; padding: 0 20px; }
-    table  { margin-top: 5.5rem; width: 85%; }
-    img    { width: 45%; }
 }
 
     footer a,
@@ -181,5 +129,80 @@ background-color: hsla(0, 0%, 100%, 0.35);
   border-radius: 50%;
 }
 
+section {
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 80px; /* Prevent content from being hidden by fixed footer */
+}
+
+/* Responsive media queries (mobile-first) */
+
+/* Larger phones / small tablets */
+@media screen and (min-width: 481px) {
+    html { font-size: 16px; }
+    header { height: 72px; padding: 0 24px; }
+    table { width: 85%; margin-top: 5.5rem; }
+    .nav1 { position: static; display: inline-block; opacity: 0.95; }
+    img { width: 60%; }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+    html { font-size: 17px; }
+    header { height: 80px; padding: 0 32px; }
+    table { width: 80%; margin-top: 6rem; }
+    .about { grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .nav2, strong { justify-content: flex-end; }
+    img { width: 45%; }
+}
+
+/* Desktop / large */
+@media screen and (min-width: 1024px) {
+    html { font-size: 18px; }
+    header { height: 88px; padding: 0 40px; }
+    table { width: 70%; margin-top: 7rem; }
+    img { width: 35%; }
+}
+
+/* Very small screens tweaks */
+@media screen and (max-width: 420px) {
+    header { height: auto; padding: 10px; flex-wrap: wrap; }
+    h2, h3 { float: none; margin: .5rem 0; border-width: 3px; }
+    table { width: 100%; margin-top: 7rem; font-size: 0.95rem; } /* Reduced from 10rem */
+    img { width: 100%; border-radius: 12px; }
+    footer {font-size: 14px;}
+    section { margin-bottom: 100px; } /* ADD THIS LINE */
+}
+
+/* Phones held landscape */
+@media (orientation: landscape) and (max-width: 767px) {
+    header { height: 56px; padding: 6px 12px; }
+    table  { margin-top: 5rem; width: 95%; } /* Increased from 4.5rem */
+    .nav1  { position: static; opacity: 0.95; }
+    img    { width: 55%; }
+    section { margin-bottom: 70px; } /* ADD THIS LINE */
+}
+
+/* Phablet / small tablet landscape */
+@media (orientation: landscape) and (min-width: 768px) and (max-width: 1023px) {
+    header { height: 72px; padding: 0 20px; }
+    table  { margin-top: 5.5rem; width: 85%; }
+    img    { width: 45%; }
+}
+
+@media (max-width: 600px) {
+    table {
+        width: 95%;
+        margin-top: 6rem; /* Reduced from 8rem */
+        display: block;
+        overflow-x: auto;
+    }
+    td, th {
+        display: table-cell;
+        width: auto;
+    }
+}
+
 /* 1. Flexbox was used for the header and footer because they need to stay in the viewport and at their respective edges of it.
 2. Grid was used for the bio because they need to be carefully organized and spaced between. */
+
